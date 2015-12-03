@@ -38,7 +38,7 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-zi-g9e">
                                 <rect key="frame" x="198" y="72" width="102" height="79"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <state key="normal" title="List"/>
                                 <connections>
                                     <segue destination="XX5-cB-7Og" kind="push" id="LYR-gz-vhF"/>
@@ -68,8 +68,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fVx-1e-gvd">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DynamicCell" id="fVx-1e-gvd">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVx-1e-gvd" id="0v1-km-Hdd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -83,7 +83,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kj8-ex-ewM">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="PcE-IW-gNd">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="PcE-IW-gNd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pa1-U1-WRW">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,6 +159,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m90-Ux-j4P"/>
+        <segue reference="LYR-gz-vhF"/>
     </inferredMetricsTieBreakers>
 </document>
