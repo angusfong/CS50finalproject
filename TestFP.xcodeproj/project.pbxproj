@@ -19,6 +19,7 @@
 		757323A01C0FFA230077EBF9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7573239F1C0FFA230077EBF9 /* TaskManager.swift */; };
 		757323A21C0FFEC50077EBF9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757323A11C0FFEC50077EBF9 /* ListViewController.swift */; };
 		757323A41C10079F0077EBF9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757323A31C10079F0077EBF9 /* AddViewController.swift */; };
+		757323A61C1025040077EBF9 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757323A51C1025040077EBF9 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7573239F1C0FFA230077EBF9 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		757323A11C0FFEC50077EBF9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		757323A31C10079F0077EBF9 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		757323A51C1025040077EBF9 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				75470BDF1C0F5EF200E46A83 /* AppDelegate.swift */,
 				75470BEB1C0F5EF200E46A83 /* Info.plist */,
 				757323A31C10079F0077EBF9 /* AddViewController.swift */,
+				757323A51C1025040077EBF9 /* test.swift */,
 			);
 			path = TestFP;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				757323A41C10079F0077EBF9 /* AddViewController.swift in Sources */,
+				757323A61C1025040077EBF9 /* test.swift in Sources */,
 				75470BE01C0F5EF200E46A83 /* AppDelegate.swift in Sources */,
 				7573239C1C0FF45F0077EBF9 /* MapViewController.swift in Sources */,
 				757323A21C0FFEC50077EBF9 /* ListViewController.swift in Sources */,
