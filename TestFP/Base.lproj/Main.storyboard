@@ -36,14 +36,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-Et-5PI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-zi-g9e">
-                                <rect key="frame" x="198" y="72" width="102" height="79"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
-                                <state key="normal" title="List"/>
-                                <connections>
-                                    <segue destination="XX5-cB-7Og" kind="push" id="LYR-gz-vhF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -53,7 +45,19 @@
                             <constraint firstItem="w1L-Et-5PI" firstAttribute="top" secondItem="4Fk-iB-DLS" secondAttribute="top" id="e3P-Te-Uvf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nX7-r9-uU0"/>
+                    <navigationItem key="navigationItem" id="nX7-r9-uU0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="r9x-zJ-6TQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S8c-zi-g9e">
+                                <rect key="frame" x="202" y="-18" width="102" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="List"/>
+                                <connections>
+                                    <segue destination="XX5-cB-7Og" kind="push" id="LYR-gz-vhF"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH7-VW-T2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +73,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DynamicCell" id="fVx-1e-gvd">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVx-1e-gvd" id="0v1-km-Hdd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -159,6 +163,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LYR-gz-vhF"/>
+        <segue reference="m90-Ux-j4P"/>
     </inferredMetricsTieBreakers>
 </document>

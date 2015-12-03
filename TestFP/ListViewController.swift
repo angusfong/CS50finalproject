@@ -40,10 +40,10 @@ class ListViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Default", forIndexPath: indexPath)
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default")
 
-        cell.textLabel?.text = taskManager.tasks[indexPath.row].name
-        cell.detailTextLabel?.text = taskManager.tasks[indexPath.row].description
+        cell.textLabel!.text = taskManager.tasks[indexPath.row].name
+        cell.detailTextLabel!.text = taskManager.tasks[indexPath.row].description
         
         return cell
     }
