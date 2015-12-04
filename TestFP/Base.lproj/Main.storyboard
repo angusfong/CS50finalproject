@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="907"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View-->
         <scene sceneID="glf-Zr-v1q">
             <objects>
                 <viewController id="fJC-j7-rH8" customClass="MapViewController" customModule="TestFP" sceneMemberID="viewController">
@@ -35,6 +35,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-Et-5PI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HrM-i3-4qa" appends="YES" id="UOD-Ge-ALv"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,7 +49,7 @@
                             <constraint firstItem="w1L-Et-5PI" firstAttribute="top" secondItem="4Fk-iB-DLS" secondAttribute="top" id="e3P-Te-Uvf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nX7-r9-uU0">
+                    <navigationItem key="navigationItem" title="Map View" id="nX7-r9-uU0">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="r9x-zJ-6TQ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S8c-zi-g9e">
                                 <rect key="frame" x="202" y="-18" width="102" height="79"/>
@@ -58,12 +62,20 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="w1L-Et-5PI" id="tfm-yQ-pmL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH7-VW-T2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="HrM-i3-4qa">
+                    <connections>
+                        <action selector="addPin:" destination="fJC-j7-rH8" id="ecs-U3-Tdp"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="836" y="904"/>
         </scene>
-        <!--List View Controller-->
+        <!--Task List-->
         <scene sceneID="Hln-B3-ae3">
             <objects>
                 <tableViewController id="XX5-cB-7Og" customClass="ListViewController" customModule="TestFP" sceneMemberID="viewController">
@@ -73,7 +85,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DynamicCell" id="fVx-1e-gvd">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVx-1e-gvd" id="0v1-km-Hdd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -86,7 +98,7 @@
                             <outlet property="delegate" destination="XX5-cB-7Og" id="iwh-IJ-bsj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kj8-ex-ewM">
+                    <navigationItem key="navigationItem" title="Task List" id="kj8-ex-ewM">
                         <barButtonItem key="rightBarButtonItem" style="done" id="PcE-IW-gNd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pa1-U1-WRW">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -106,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1241" y="904"/>
         </scene>
-        <!--Add View Controller-->
+        <!--Add View-->
         <scene sceneID="PcI-CB-E25">
             <objects>
                 <viewController id="QPz-al-kQ0" customClass="AddViewController" customModule="TestFP" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,13 +156,12 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addButton:" destination="QPz-al-kQ0" eventType="touchUpInside" id="UdJ-UD-eQS"/>
-                                    <segue destination="XX5-cB-7Og" kind="push" id="m90-Ux-j4P"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TBs-s4-ucs"/>
+                    <navigationItem key="navigationItem" title="Add View" id="TBs-s4-ucs"/>
                     <connections>
                         <outlet property="newTaskDescription" destination="CyA-u8-h6m" id="CYr-no-rfB"/>
                         <outlet property="newTaskLocation" destination="SOP-fT-FoM" id="jEQ-6i-GeH"/>
@@ -162,7 +173,4 @@
             <point key="canvasLocation" x="1650" y="904"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="m90-Ux-j4P"/>
-    </inferredMetricsTieBreakers>
 </document>

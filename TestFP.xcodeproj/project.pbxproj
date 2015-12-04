@@ -116,12 +116,12 @@
 				7573239F1C0FFA230077EBF9 /* TaskManager.swift */,
 				7573239B1C0FF45F0077EBF9 /* MapViewController.swift */,
 				757323A11C0FFEC50077EBF9 /* ListViewController.swift */,
+				757323A31C10079F0077EBF9 /* AddViewController.swift */,
 				75470BE31C0F5EF200E46A83 /* Main.storyboard */,
 				75470BE61C0F5EF200E46A83 /* Assets.xcassets */,
 				75470BE81C0F5EF200E46A83 /* LaunchScreen.storyboard */,
 				75470BDF1C0F5EF200E46A83 /* AppDelegate.swift */,
 				75470BEB1C0F5EF200E46A83 /* Info.plist */,
-				757323A31C10079F0077EBF9 /* AddViewController.swift */,
 				757323A51C1025040077EBF9 /* test.swift */,
 			);
 			path = TestFP;

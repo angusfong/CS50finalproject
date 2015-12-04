@@ -31,6 +31,12 @@ class AddViewController: UIViewController {
         newTaskName.text = ""
         newTaskDescription.text = ""
         newTaskLocation.text = ""
+    
+        let t:UITableViewController = self.navigationController?.viewControllers[1] as! UITableViewController
+        
+        t.tableView.reloadData()
+        self.navigationController?.popViewControllerAnimated(true)
+        
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
