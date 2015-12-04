@@ -57,7 +57,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01) /*TODO: depend on scope of tasks*/)
         
         self.mapView.setRegion(region, animated: true)
         
@@ -66,6 +66,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     @IBAction func addPin(sender: UILongPressGestureRecognizer) {
+        /*TODO: Add item to [tasks] within taskManager*/
+        /*TODO: ALlow user to input task Name, Description and Location EITHER ON ADDVIEWCONTROLLER OR ALERT(TBD)*/
+        /*TODO: Allow dragging without dropping pin*/
+        /*TODO: Function to enable and set Geofencing*/
         
         let location = sender.locationInView(self.mapView)
         
@@ -75,6 +79,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         
         annotation.coordinate = localCoordinate
         
+        
+        /*TODO: Custom dynamic Name and Description*/
+        /*TODO: Check if possible to have annotation as form*/
         annotation.title = "Task"
         
         annotation.subtitle = "Testing 123"

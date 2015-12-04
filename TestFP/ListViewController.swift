@@ -47,6 +47,9 @@ class ListViewController: UITableViewController {
         
         return cell
     }
+    
+    /*TODO: Add a reminder by clicking on the next empty cell
+    TODO: Switch enabling locations*/
 
 
     /*

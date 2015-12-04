@@ -36,7 +36,6 @@ class AddViewController: UIViewController {
         
         t.tableView.reloadData()
         self.navigationController?.popViewControllerAnimated(true)
-        
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
