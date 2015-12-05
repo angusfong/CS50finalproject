@@ -31,10 +31,10 @@ class AddViewController: UIViewController {
         newTaskName.text = ""
         newTaskDescription.text = ""
         newTaskLocation.text = ""
-    
-        let t:UITableViewController = self.navigationController?.viewControllers[1] as! UITableViewController
-        
-        t.tableView.reloadData()
+
+        if let t = (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2]) as? UITableViewController? {
+            t!.tableView.reloadData()
+        }
         self.navigationController?.popViewControllerAnimated(true)
     }
 

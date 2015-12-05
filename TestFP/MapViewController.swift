@@ -66,27 +66,41 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     @IBAction func addPin(sender: UILongPressGestureRecognizer) {
-        /*TODO: Add item to [tasks] within taskManager*/
-        /*TODO: ALlow user to input task Name, Description and Location EITHER ON ADDVIEWCONTROLLER OR ALERT(TBD)*/
-        /*TODO: Allow dragging without dropping pin*/
-        /*TODO: Function to enable and set Geofencing*/
-        
-        let location = sender.locationInView(self.mapView)
-        
-        let localCoordinate = self.mapView.convertPoint(location, toCoordinateFromView: self.mapView)
-        
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = localCoordinate
-        
-        
-        /*TODO: Custom dynamic Name and Description*/
-        /*TODO: Check if possible to have annotation as form*/
-        annotation.title = "Task"
-        
-        annotation.subtitle = "Testing 123"
-        
-        self.mapView.addAnnotation(annotation)
+        if (sender.state == UIGestureRecognizerState.Ended) {
+            
+            /*TODO: Add item to [tasks] within taskManager*/
+            /*TODO: ALlow user to input task Name, Description and Location EITHER ON ADDVIEWCONTROLLER OR ALERT(TBD)*/
+            /*TODO: Allow dragging without dropping pin*/
+            /*TODO: Function to enable and set Geofencing*/
+            
+            
+            //test
+            self.navigationController?.pushViewController((self.storyboard?.instantiateViewControllerWithIdentifier("AddViewController"))!, animated: true)
+            
+            //test over
+            
+            let location = sender.locationInView(self.mapView)
+            
+            let localCoordinate = self.mapView.convertPoint(location, toCoordinateFromView: self.mapView)
+            
+            let annotation = MKPointAnnotation()
+            
+            annotation.coordinate = localCoordinate
+            
+            
+            /*TODO: Custom dynamic Name and Description*/
+            /*TODO: Check if possible to have annotation as form*/
+            annotation.title = taskManager.tasks[taskManager.tasks.count].name
+            
+            annotation.subtitle = taskManager.tasks[taskManager.tasks.count].description
+            
+            self.mapView.addAnnotation(annotation)
+
+        }
+        else if (sender.state == UIGestureRecognizerState.Began){
+            NSLog("UIGestureRecognizerStateBegan.");
+            //Do Whatever You want on Began of Gesture
+        }
         
     }
     

@@ -48,6 +48,13 @@ class ListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            taskManager.tasks.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
     /*TODO: Add a reminder by clicking on the next empty cell
     TODO: Switch enabling locations*/
 
