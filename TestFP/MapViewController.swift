@@ -66,7 +66,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
 
             let localCoordinate = self.mapView.convertPoint(location, toCoordinateFromView: self.mapView)
             
-            if let t = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? UIViewController? {
+            if self.navigationController?.viewControllers.count > 1 {
+            
+            if ((self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as UIViewController?) != nil) {
                 
                 annotation.coordinate = localCoordinate
                 
@@ -80,6 +82,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
 
             }
             
+            }
             
             
             else {
