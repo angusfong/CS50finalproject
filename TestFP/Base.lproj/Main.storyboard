@@ -85,7 +85,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DynamicCell" id="fVx-1e-gvd">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVx-1e-gvd" id="0v1-km-Hdd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -116,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8y-4B-r0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="904"/>
+            <point key="canvasLocation" x="1230" y="904"/>
         </scene>
         <!--Add View-->
         <scene sceneID="PcI-CB-E25">
@@ -126,7 +126,7 @@
                         <viewControllerLayoutGuide type="top" id="DiB-9j-T9J"/>
                         <viewControllerLayoutGuide type="bottom" id="ONQ-Wm-l2W"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ulE-oQ-jJF">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ulE-oQ-jJF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -135,19 +135,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOP-fT-FoM">
-                                <rect key="frame" x="20" y="256" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp6-W3-slo">
                                 <rect key="frame" x="96" y="72" width="129" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSO-7Y-6Aj">
-                                <rect key="frame" x="254" y="294" width="46" height="30"/>
+                                <rect key="frame" x="254" y="260" width="46" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addButton:" destination="QPz-al-kQ0" eventType="touchUpInside" id="UdJ-UD-eQS"/>
@@ -158,13 +153,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2U-dg-pgI">
+                                <rect key="frame" x="20" y="255" width="113" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDd-dy-7Tc">
+                                <rect key="frame" x="136" y="260" width="51" height="31"/>
+                                <connections>
+                                    <segue destination="fJC-j7-rH8" kind="push" id="WNh-8N-vAi"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add View" id="TBs-s4-ucs"/>
                     <connections>
                         <outlet property="newTaskDescription" destination="CyA-u8-h6m" id="CYr-no-rfB"/>
-                        <outlet property="newTaskLocation" destination="SOP-fT-FoM" id="jEQ-6i-GeH"/>
                         <outlet property="newTaskName" destination="64V-bB-pJT" id="c4a-zA-fDr"/>
                     </connections>
                 </viewController>
@@ -173,4 +179,7 @@
             <point key="canvasLocation" x="1650" y="904"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WNh-8N-vAi"/>
+    </inferredMetricsTieBreakers>
 </document>

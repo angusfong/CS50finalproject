@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 var taskManager: TaskManager = TaskManager()
 
 struct task {
     var name:String = "NoName"
     var description:String = "NoDescription"
-    var location:String = "NoLocation"
+    var pin:MKPointAnnotation
 }
 
 class TaskManager: NSObject {
     var tasks = [task]()
  
-    func addTask(name:String, description:String, location:String) {
-        tasks.append(task(name:name, description:description, location:location))
+    func addTask(name:String, description:String, pin:MKPointAnnotation) {
+        tasks.append(task(name:name, description:description, pin:pin))
     }
 }

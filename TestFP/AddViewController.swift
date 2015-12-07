@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class AddViewController: UIViewController {
 
@@ -26,15 +28,16 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func addButton(sender: AnyObject) {
-        taskManager.addTask(newTaskName.text!, description: newTaskDescription.text!, location: newTaskLocation.text!)
+        taskManager.addTask(newTaskName.text!, description: newTaskDescription.text!, pin:MKPointAnnotation())
         self.view.endEditing(true)
         newTaskName.text = ""
         newTaskDescription.text = ""
         newTaskLocation.text = ""
 
-        if let t = (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2]) as? UITableViewController? {
-            t!.tableView.reloadData()
-        }
+        let t = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? UITableViewController?
+        
+            t!!.tableView.reloadData()
+    
         self.navigationController?.popViewControllerAnimated(true)
     }
 
@@ -46,6 +49,13 @@ class AddViewController: UIViewController {
         textField.resignFirstResponder()
         return true
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        taskManager.addTask(newTaskName.text!, description: newTaskDescription.text!, pin:MKPointAnnotation())
+        
+        }
+    
     
     /*
     // MARK: - Navigation
